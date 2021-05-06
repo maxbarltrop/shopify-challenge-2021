@@ -1,0 +1,27 @@
+
+.movie-result-row{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    height: 100px; 
+    grid-column-gap: $padding-sm;
+    
+}
+
+.movie-poster{ 
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    padding-top: $padding-lg;
+    overflow: hidden;
+}
+
+.movie-button{ 
+    max-height: 40px;
+    margin: auto;
+}
+
+.movie-list__item{ 
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
