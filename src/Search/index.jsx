@@ -105,16 +105,17 @@ const Search = (props) => {
     return (
       <React.Fragment>
         {resultHeader()}
-        {list.map((movie) => {
-          return (
-            <ResultItem
-              movie={movie}
-              select={() => selectMovie(movie)}
-              isNominated={isNominated(movie)}
-              key={uuid()}
-            />
-          );
-        })}
+        {list &&
+          list.map((movie) => {
+            return (
+              <ResultItem
+                movie={movie}
+                select={() => selectMovie(movie)}
+                isNominated={isNominated(movie)}
+                key={uuid()}
+              />
+            );
+          })}
       </React.Fragment>
     );
   };
