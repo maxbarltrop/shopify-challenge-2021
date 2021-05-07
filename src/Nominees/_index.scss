@@ -1,0 +1,25 @@
+
+.nominee-list{ 
+    padding: $padding-sm;
+    color: $color-accent-1;
+}
+
+.nominee-header{ 
+    text-align: right;
+    margin: $padding-lg 0;
+    font-size: 40px;
+    color: $color-accent-1;
+    font-weight: 300;
+}
+
+.nominee-result-row{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    height: 100px; 
+    grid-column-gap: $padding-sm;
+    border: 4px solid $color-gold;
+    font-weight: 900;
+    border-radius: 6px;
+    margin-bottom: $padding-sm;
+    padding: $padding-sm;
+}

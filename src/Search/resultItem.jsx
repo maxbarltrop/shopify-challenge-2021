@@ -1,7 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Button from "@material-ui/core/Button";
+import { makeStyles } from "@material-ui/core/styles";
 
 const Item = ({ movie, select, isNominated }) => {
+  const useStyles = makeStyles({
+    button: {
+      color: "white",
+      border: "2px solid #FFD700",
+      opacity: 0.85,
+      "&:hover": { opacity: 1 },
+    },
+  });
+  const classes = useStyles();
+
   return (
     <div className="movie-result-row">
       <img
@@ -17,7 +28,12 @@ const Item = ({ movie, select, isNominated }) => {
       </div>
       <div className="movie-list__item">
         <div className="movie-button">
-          <Button onClick={select} variant="outlined" disabled={isNominated}>
+          <Button
+            onClick={select}
+            variant="outlined"
+            disabled={isNominated}
+            className={classes.button}
+          >
             Nominate
           </Button>
         </div>

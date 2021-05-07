@@ -1,0 +1,29 @@
+@import '../static.scss';
+
+.page-header{ 
+    width: 100vw; 
+    min-width: 800px;
+    height: 200px;
+    background-color: $color-main;
+    color: white;
+    text-align: center;
+    padding: $padding-lg;
+    font-size: 100px;
+    font-weight: 100;
+
+}
+
+.page-header__icon{ 
+    height: 80px;
+    margin: 0 $padding-lg;
+    width: auto;
+}
+
+.page-sub-header{ 
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.resume-download{
+    color: $color-accent-1;
+}
