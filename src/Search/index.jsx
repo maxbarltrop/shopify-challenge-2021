@@ -84,7 +84,7 @@ const Search = (props) => {
           Too Many Results. Narrow Your Search Term
         </div>
       );
-    } else if (list.length === 0) {
+    } else if (!list || list.length === 0) {
       return <div className="result-header">No Results Found</div>;
     }
     const current = (page - 1) * 10 + 1;
