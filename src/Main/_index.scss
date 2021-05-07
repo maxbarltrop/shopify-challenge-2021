@@ -1,0 +1,16 @@
+@import '../static.scss';
+
+.page-container{ 
+    width: 100%;
+    min-height: 150vh;
+    background-color: $color-main;
+}
+
+.page-action-area{ 
+width: 75%;
+min-width: 700px;
+margin: auto;
+display: grid;
+grid-column-gap: $padding-lg;
+grid-template-columns: 1fr 1fr;
+}

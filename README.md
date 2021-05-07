@@ -1,2 +1,3 @@
-# shopify-challenge-2021
-Frontend Developer Challenge 
+Project created by Maxwell Barltrop
+
+Credit for Icons: www.flaticon.com, Material-UI

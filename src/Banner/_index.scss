@@ -1,0 +1,27 @@
+@import '../static.scss';
+
+.completion-banner{ 
+    position:fixed;
+    top: 30px;
+    width: 60%;
+    margin-left: 20%;
+    border: 2px solid $color-accent-1;
+    color: $color-accent-1;
+    background-color: $color-accent-2;
+    padding: $padding-sm;
+    border-radius: 8px;
+    flex-direction: row;
+    transition: opacity 1s;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.completion-banner__icon{ 
+    font-size: 40px;
+}
+
+.completion-banner__text{ 
+    font-size: 24px;
+    padding-left: $padding-lg;
+    align-items: center;
+    display: flex;
+}

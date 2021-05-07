@@ -1,0 +1,69 @@
+
+@import '../static.scss';
+.movie-result-row{ 
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr 2fr;
+    height: 100px; 
+    grid-column-gap: $padding-sm;
+    
+}
+
+.movie-poster{ 
+    height: 80px;
+    width: auto;
+    max-width: 100%;
+    padding-top: $padding-lg;
+    overflow: hidden;
+}
+
+.movie-button{ 
+    max-height: 40px;
+    margin: auto;
+}
+
+.movie-list__item{ 
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+   font-size: 18px;
+}
+
+.search-container{ 
+    padding: $padding-sm;
+    color: $color-accent-1;
+}
+
+.search-container-header{ 
+    margin: $padding-lg 0;
+    font-size: 40px;
+
+    font-weight: 300;
+}
+
+.result-header{ 
+    margin-top: $padding-lg;
+    width: 100%; 
+    text-align: center;
+    font-weight: bold;
+}
+
+.search-container__search-area{ 
+    height: $sub-header-height;
+}
+
+.loading{ 
+    display: flex;
+    justify-content: center;
+    margin-top: $padding-lg;
+}
+
+.page-button-container{ 
+    width: 100%;
+    margin-top: $padding-lg;
+    display: flex;
+    justify-content: center;
+}
+
+.button-padding{ 
+    margin: 0 $padding-sm;
+}
