@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const OMDB_API_KEY = "b11b4b50";
-export const BASE_URL = "http://www.omdbapi.com/";
+export const BASE_URL = "https://www.omdbapi.com/";
 
 const getMovies = async (title, page = 1) => {
   const target = `${BASE_URL}?apikey=${OMDB_API_KEY}&s=${title}&type=movie&page=${page}`;
