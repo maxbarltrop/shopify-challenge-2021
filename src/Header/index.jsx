@@ -13,8 +13,10 @@ const Header = () => {
   };
 
   return (
-    <div className="page-header">
-      {icon()}The Shoppies{icon()}
+    <React.Fragment>
+      <div className="page-header">
+        {icon()}The Shoppies{icon()}
+      </div>
       <div className="page-sub-header">
         Shopify Fall Internship Challenge - Frontend Developer
         <br />
@@ -27,7 +29,7 @@ const Header = () => {
           Maxwell Barltrop
         </a>
       </div>
-    </div>
+    </React.Fragment>
   );
 };
 
