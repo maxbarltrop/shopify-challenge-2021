@@ -23,3 +23,19 @@
     margin-bottom: $padding-sm;
     padding: $padding-sm;
 }
+
+
+.nominee-poster{ 
+    height: 90px;
+    width: auto;
+    max-width: 100%;
+    padding-top: 5px;
+    overflow: hidden;
+}
+
+.nominee-list__empty{ 
+    font-size: 16px;
+    margin-top: $padding-lg;
+    text-align: right;
+    font-weight: bold;
+}
