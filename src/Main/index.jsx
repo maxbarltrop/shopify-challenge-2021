@@ -57,6 +57,9 @@ class PageContainer extends React.Component {
   };
 
   highlightMovie = async (movie) => {
+    if (this.state.highlight && this.state.highlight.imdbID === movie.imdbID) {
+      return;
+    }
     this.setState({ loading: true });
     const fullInfo = await omdbService.getFullMovie(movie.imdbID);
     this.setState({ loading: false });

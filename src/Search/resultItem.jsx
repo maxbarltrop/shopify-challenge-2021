@@ -40,7 +40,6 @@ const Item = ({ movie, select, isNominated, highlight }) => {
           <Button
             onClick={highlight}
             variant="outlined"
-            disabled={isNominated}
             className={classes.highlight}
           >
             Tell Me More
