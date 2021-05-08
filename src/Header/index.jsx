@@ -20,14 +20,17 @@ const Header = () => {
       <div className="page-sub-header">
         Shopify Fall Internship Challenge - Frontend Developer
         <br />
-        <a
-          href={RESUME}
-          alt="Resume Download"
-          download
-          className="resume-download"
-        >
-          Maxwell Barltrop
-        </a>
+        <span>
+          Maxwell Barltrop{" "}
+          <a
+            href={RESUME}
+            alt="Resume Download"
+            download
+            className="resume-download"
+          >
+            [Resume]
+          </a>
+        </span>
       </div>
     </React.Fragment>
   );

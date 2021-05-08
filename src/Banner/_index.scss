@@ -13,10 +13,13 @@
     flex-direction: row;
     transition: opacity 1s;
     box-shadow: 2px 2px 2px grey;
+    height: 80px;
 }
 
 .completion-banner__icon{ 
     font-size: 40px;
+    align-items: center;
+    display: flex;
 }
 
 .completion-banner__text{ 

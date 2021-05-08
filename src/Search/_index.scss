@@ -2,19 +2,32 @@
 @import '../static.scss';
 .movie-result-row{ 
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr 2fr;
-    height: 100px; 
+    grid-template-columns: 1fr 4fr 1fr 2fr 2fr;
+    height: 70px; 
     grid-column-gap: $padding-sm;
-    
+}
+
+.movie-result-header-row{ 
+    display: grid;
+    grid-template-columns:  1fr 4fr 1fr 2fr 2fr;
+    height: 40px; 
+    grid-column-gap: $padding-sm;
+    margin-top: $padding-lg;
+}
+
+.movie-list__column-header{ 
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .movie-poster{ 
-    height: 80px;
+    height: 60px;
     width: auto;
     max-width: 100%;
-    padding-top: $padding-lg;
+    padding-top: 5px;
     overflow: hidden;
 }
+
 
 .movie-button{ 
     max-height: 40px;

@@ -45,9 +45,8 @@ const Nominees = (props) => {
   };
   return (
     <div className="nominee-list">
-      <div className="search-container__search-area">
-        <div className="nominee-header">Your Nominees</div>
-      </div>
+      <div className="nominee-header">Your Nominees</div>
+
       {nominees.map((movie) => {
         return <NomineeItem movie={movie} key={uuid()} />;
       })}

@@ -57,8 +57,13 @@ const Search = (props) => {
 
   const inputChanged = async (newInput, page) => {
     setLoading(true);
+    let _page = page;
+    if (input !== newInput) {
+      setPage(1);
+      _page = 1;
+    }
     setInput(newInput);
-    const searchResults = await omdbService.getMovies(newInput, page);
+    const searchResults = await omdbService.getMovies(newInput, _page);
     const { movies } = searchResults;
     setList(movies);
     setTotal(searchResults.total);
@@ -73,15 +78,21 @@ const Search = (props) => {
     props.addNominee(movie);
   };
 
+  const highlightMovie = (movie) => {
+    props.highlightMovie(movie);
+  };
+
   const resultHeader = () => {
     if (!input) {
       return (
-        <div className="result-header">Get searching to find some movies!</div>
+        <div className="result-header">
+          Enter a search term to find some movies!
+        </div>
       );
     } else if (total === -1) {
       return (
         <div className="result-header">
-          Too Many Results. Narrow Your Search Term
+          Too Many Results! Try Narrowing Your Search Term.
         </div>
       );
     } else if (!list || list.length === 0) {
@@ -91,6 +102,21 @@ const Search = (props) => {
     const max = current + list.length - 1;
     return (
       <div className="result-header">{`Showing ${current}-${max} of ${total}`}</div>
+    );
+  };
+
+  const tableHeader = () => {
+    if (!list || list.length === 0) {
+      return null;
+    }
+    return (
+      <div className="movie-result-header-row">
+        <div className="movie-list__column-header"></div>
+        <div className="movie-list__column-header">Title</div>
+        <div className="movie-list__column-header">Year</div>
+        <div className="movie-list__column-header"></div>
+        <div className="movie-list__column-header"></div>
+      </div>
     );
   };
 
@@ -105,12 +131,14 @@ const Search = (props) => {
     return (
       <React.Fragment>
         {resultHeader()}
+        {tableHeader()}
         {list &&
           list.map((movie) => {
             return (
               <ResultItem
                 movie={movie}
                 select={() => selectMovie(movie)}
+                highlight={() => highlightMovie(movie)}
                 isNominated={isNominated(movie)}
                 key={uuid()}
               />
