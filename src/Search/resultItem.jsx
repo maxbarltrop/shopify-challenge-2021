@@ -14,6 +14,7 @@ const Item = ({ movie, select, isNominated, highlight }) => {
       color: "white",
       border: "2px solid white",
       opacity: 0.85,
+      fontSize: "12px",
       "&:hover": { opacity: 1 },
     },
   });
