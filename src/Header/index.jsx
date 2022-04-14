@@ -1,6 +1,5 @@
 import React from "react";
 import SPOTLIGHT_ICON from "../assets/spotlight.svg";
-import RESUME from "../assets/BarltropMaxwellResume.pdf";
 const Header = () => {
   const icon = () => {
     return (
@@ -21,15 +20,7 @@ const Header = () => {
         Shopify Fall Internship Challenge - Frontend Developer
         <br />
         <span>
-          Maxwell Barltrop{" "}
-          <a
-            href={RESUME}
-            alt="Resume Download"
-            download
-            className="resume-download"
-          >
-            [Resume]
-          </a>
+          Maxwell Barltrop
         </span>
       </div>
     </React.Fragment>
