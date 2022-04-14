@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import uuid from "uuid";
-
+import _ from "lodash";
 const Nominees = (props) => {
   const { nominees, removeNominee } = props;
 
@@ -20,7 +20,7 @@ const Nominees = (props) => {
       <div className="nominee-result-row">
         <img
           src={movie.Poster}
-          className="movie-poster"
+          className="nominee-poster"
           alt={`${movie.Title} poster`}
         />
         <div className="movie-list__item">
@@ -43,13 +43,28 @@ const Nominees = (props) => {
       </div>
     );
   };
+
+  const list = () => {
+    if (_.isEmpty(nominees)) {
+      return (
+        <div className="nominee-list__empty">
+          When you nominate films they'll appear here
+        </div>
+      );
+    }
+    return (
+      <React.Fragment>
+        {nominees.map((movie) => {
+          return <NomineeItem movie={movie} key={uuid()} />;
+        })}
+      </React.Fragment>
+    );
+  };
+
   return (
     <div className="nominee-list">
       <div className="nominee-header">Your Nominees</div>
-
-      {nominees.map((movie) => {
-        return <NomineeItem movie={movie} key={uuid()} />;
-      })}
+      {list()}
     </div>
   );
 };
