@@ -1,3 +1,5 @@
+#Shopify Front-End Challenge Fall 2021
+
 Project created by Maxwell Barltrop for Shopify UX Developer Intern & Web Developer Intern Challenge - Fall 2021
 
 Hosted site can be found at https://max-b-shopify-challenge-2021.herokuapp.com/
